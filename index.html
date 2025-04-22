@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnaissance de Caractères Chinois Manuscrits</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- TensorFlow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.15.0/tf.min.js"></script>
+    <!-- Script de l'application -->
+    <script src="chinese_characters.js"></script>
+    <script src="drawing.js"></script>
+    <script src="model.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Reconnaissance de Caractères Chinois Manuscrits</h1>
+        
+        <p class="info-text">Dessinez un caractère chinois dans l'espace ci-dessous</p>
+        
+        <div class="canvas-container">
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+        
+        <div class="button-group">
+            <button id="recognizeBtn">Reconnaître</button>
+            <button id="clearBtn">Effacer</button>
+        </div>
+        
+        <div class="status-indicator" id="statusIndicator">
+            <div class="status-text" id="statusText">Prêt</div>
+            <div class="loader" id="loader"></div>
+        </div>
+        
+        <div class="results-container">
+            <h2>Résultats</h2>
+            <div class="character-results" id="characterResults">
+                <p>Les caractères reconnus apparaîtront ici</p>
+            </div>
+        </div>
+        
+        <div class="history-container">
+            <h3 class="history-title">Historique</h3>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </div>
+</body>
+</html>
